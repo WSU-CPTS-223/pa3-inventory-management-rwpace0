@@ -1,10 +1,13 @@
-out: clean compile execute
+out: clean run execute
 
 compile: main.cpp
 	g++ -g -Wall -std=c++14 main.cpp -o mainexe
 
-execute: mainexe
+run: mainexe
 	./mainexe
+
+runnew:
+	g++ -g -Wall -std=c++14 main.cpp -o mainexe && ./mainexe
 
 clean:
 	rm -f mainexe
