@@ -85,6 +85,7 @@ void Inventory::load(const string &filename)
       // hash categories
       for (const string &c : p.categories)
       {
+        // find product id and store pointer in category vector
         auto *list = productsCategory.find(c);
         if (list)
         {
